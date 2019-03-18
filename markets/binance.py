@@ -6,7 +6,7 @@ from binance.client import Client
 
 def binance(api_key, api_key_secret):
     output_dict = {}
-    btc_base_values = {}
+    fiat_values = {}
     try:
         api = pybitflyer.API()
         rate = api.ticker(product_code="btc_jpy")
@@ -22,16 +22,16 @@ def binance(api_key, api_key_secret):
 
         for x_key, x_value in output_dict.items():
             if x_key == "JPY":
-                btc_base_values[x_key] = x_value
+                fiat_values[x_key] = x_value
             elif x_key == "BTC":
-                btc_base_values[x_key] = x_value * rate
+                fiat_values[x_key] = x_value * rate
             else:
                 for y_key, y_value in prices.items():
                     if y_key.count(x_key):
                         new_value = x_value * y_value
-                        btc_base_values[x_key] = new_value * rate
+                        fiat_values[x_key] = new_value * rate
 
-        return [output_dict,btc_base_values]
+        return [output_dict,fiat_values]
 
     except:
-        return [output_dict,btc_base_values]
+        return [output_dict,fiat_values]

@@ -5,7 +5,7 @@ import pybitflyer
 
 def bitflyer(api_key, api_key_secret):
     coin_data = {}
-    btc_base_values = {}
+    fiat_values = {}
     try:
         api = pybitflyer.API(api_key=api_key, api_secret=api_key_secret)
 
@@ -23,15 +23,15 @@ def bitflyer(api_key, api_key_secret):
 
         for x_key, x_value in coin_data.items():
             if x_key == "JPY":
-                btc_base_values[x_key] = x_value
+                fiat_values[x_key] = x_value
             elif x_key == "BTC":
-                btc_base_values[x_key] = x_value * rate
+                fiat_values[x_key] = x_value * rate
             else:
                 for y_key, y_value in rate_list.items():
                     if y_key.count(x_key):
                         new_value = x_value * y_value
-                        btc_base_values[x_key] = new_value * rate
+                        fiat_values[x_key] = new_value * rate
 
-        return [coin_data,btc_base_values]
+        return [coin_data,fiat_values]
     except:
-        return [coin_data,btc_base_values]
+        return [coin_data,fiat_values]

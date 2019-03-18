@@ -6,7 +6,7 @@ import pybitflyer
 def quoine(api_key, api_key_secret):
 
   output_dict = {}
-  btc_base_values = {}
+  fiat_values = {}
 
   try:
 
@@ -27,10 +27,10 @@ def quoine(api_key, api_key_secret):
       for i in products:
         print(i['base_currency'])
         if i['base_currency'] == key:
-          btc_base_values[key] = float(rate) * float(value) * float(i['last_traded_price'])
+          fiat_values[key] = float(rate) * float(value) * float(i['last_traded_price'])
           break
 
-    return [output_dict,btc_base_values]
+    return [output_dict,fiat_values]
 
   except:
-      return [output_dict,btc_base_values]
+      return [output_dict,fiat_values]
