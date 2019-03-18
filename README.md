@@ -2,20 +2,10 @@
 You can fetch curypto currency amount from exchange accounts. 
 This is a wrapper libraly for some fetching curypto currency libralies.
 
-You can use for below exchanges.
-* Binance
-* Bitflyer
-* Quoine
-* Kucoin
-* Bitbank
-* Poloniex
-* Coincheck
-* Zaif
-
 ## Install
 Install package from this github repository.
 ```
-pip install https://github.com/gitackt/pyfetchcoins.git
+pip install git+https://github.com/gitackt/pyfetchcoins.git
 ```
 
 ## Setting
@@ -50,3 +40,14 @@ api_key_secret = "xxxxxxxxxxxxxxxxxxxxxxxx"
 
 fetching.fetch(name, api_key, api_key_secret)
 ```
+
+## Refernce
+You can use for below exchanges.
+* Binance
+* Bitflyer
+* Quoine
+* Kucoin
+* Bitbank
+* Poloniex
+* Coincheck
+* Zaif
