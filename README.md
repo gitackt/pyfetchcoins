@@ -1,8 +1,25 @@
 # pyfetchcoins
-Fetch crypto currencies from market.
+You can fetch curypto currency amount from exchange accounts. 
+This is a wrapper libraly for some fetching curypto currency libralies.
+
+You can use for below exchanges.
+* Binance
+* Bitflyer
+* Quoine
+* Kucoin
+* Bitbank
+* Poloniex
+* Coincheck
+* Zaif
+
+## Install
+Install package from this github repository.
+```
+pip install https://github.com/gitackt/pyfetchcoins.git
+```
 
 ## Setting
-install package dependencies.
+Install package dependencies.
 
 ```
 requests
@@ -16,3 +33,20 @@ git+https://github.com/bitbankinc/python-bitbankcc.git
 https://github.com/s4w3d0ff/python-poloniex/archive/v0.4.7.zip
 ```
 
+## Usage
+```
+import fetching from pyfetchcoins
+
+name = "Exchange Name"
+api_key = "Your api Key"
+api_key_secret = "Your api Key Secret"
+
+fetching.fetch(name, api_key, api_key_secret)
+
+// ex)
+name = "Bitflyer"
+api_key = "xxxxxxxxxxxxxxxxx"
+api_key_secret = "xxxxxxxxxxxxxxxxxxxxxxxx"
+
+fetching.fetch(name, api_key, api_key_secret)
+```
