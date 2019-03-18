@@ -51,3 +51,22 @@ You can use for below exchanges.
 * Poloniex
 * Coincheck
 * Zaif
+
+### Response
+Return coin volume and JPY values.
+```
+[
+  // Amount
+  {
+    "BTC": 0.0001,
+    "ETH": 0.02,
+    "XRP": 50,
+  },
+  // JPY Value
+  {
+    "BTC": 44,
+    "ETH": 300,
+    "XRP": 1750,
+  }
+]
+```
