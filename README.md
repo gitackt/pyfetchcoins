@@ -1,5 +1,5 @@
 # pyfetchcoins
-You can fetch curypto currency amount from exchange accounts. 
+You can fetch crypto currency amount from exchange accounts. 
 `pyfetchcoins` is a wrapper libraly for some fetching crypto currency libralies.
 
 ## Install
