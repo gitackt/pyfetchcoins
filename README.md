@@ -24,7 +24,7 @@ https://github.com/s4w3d0ff/python-poloniex/archive/v0.4.7.zip
 ```
 
 ## Usage
-```
+```python
 import fetching from pyfetchcoins
 
 name = "Exchange Name"
@@ -32,6 +32,8 @@ api_key = "Your api Key"
 api_key_secret = "Your api Key Secret"
 
 fetching.fetch(name, api_key, api_key_secret)
+
+
 
 // ex)
 name = "Bitflyer"
@@ -54,15 +56,13 @@ You can use for below exchanges.
 
 ### Response
 Return coin volume and JPY values.
-```
+```json
 [
-  // Amount
   {
     "BTC": 0.0001,
     "ETH": 0.02,
     "XRP": 50,
   },
-  // JPY Value
   {
     "BTC": 44,
     "ETH": 300,
