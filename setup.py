@@ -7,7 +7,7 @@ setup(
     author_email='git.tackt@gmail.com',
     url='https://github.com/gitackt/pyfetchcoins',
     license=license,
-    packages=find_packages(exclude=('tests', 'docs'))
+    # packages=find_packages(exclude=('tests', 'docs'))
     install_requires=[
         'requests', 
         'pybitflyer', 

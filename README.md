@@ -7,7 +7,7 @@ Install package from this github repository.
 ```
 pip install git+https://github.com/gitackt/pyfetchcoins.git
 ```
-
+<!-- 
 ## Setting
 Install package dependencies from pip.
 
@@ -21,29 +21,8 @@ coincheck
 python-quoine
 git+https://github.com/bitbankinc/python-bitbankcc.git
 https://github.com/s4w3d0ff/python-poloniex/archive/v0.4.7.zip
-```
+``` -->
 
-## Usage
-```python
-import fetching from pyfetchcoins
-
-name = "Exchange Name"
-api_key = "Your api Key"
-api_key_secret = "Your api Key Secret"
-
-fetching.fetch(name, api_key, api_key_secret)
-
-
-
-// ex)
-name = "Bitflyer"
-api_key = "xxxxxxxxxxxxxxxxx"
-api_key_secret = "xxxxxxxxxxxxxxxxxxxxxxxx"
-
-fetching.fetch(name, api_key, api_key_secret)
-```
-
-## Refernce
 You can use for below exchanges.
 * Binance
 * Bitflyer
@@ -53,6 +32,17 @@ You can use for below exchanges.
 * Poloniex
 * Coincheck
 * Zaif
+
+## Usage
+```python
+import fetching from pyfetchcoins
+
+name = "Bitflyer"
+api_key = "xxxxxxxxxxxxxxxxx"
+api_key_secret = "xxxxxxxxxxxxxxxxxxxxxxxx"
+
+fetching.fetch(name, api_key, api_key_secret)
+```
 
 ### Response
 Return coin volume and JPY values.
