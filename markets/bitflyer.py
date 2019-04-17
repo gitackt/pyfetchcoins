@@ -12,7 +12,6 @@ def bitflyer(api_key, api_key_secret):
         rate = api.ticker(product_code="btc_jpy")
         rate = rate['best_bid']
 
-        #資産情報の取得
         balance = api.getbalance()
         for currency in balance:
             coin_data[currency['currency_code']] = currency['amount']

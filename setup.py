@@ -1,8 +1,11 @@
+from setuptools import Extension, setup
+
 setup(
     name='pyfetchcoins',
     version='0.1.0',
     description='Fetch curypto currency volume from exchanges',
-    long_description=readme,
+    long_description=open('README.md').read(),
+    long_description_content_type="text/markdown",
     author='Takuto Mitsuhashi',
     author_email='git.tackt@gmail.com',
     url='https://github.com/gitackt/pyfetchcoins',

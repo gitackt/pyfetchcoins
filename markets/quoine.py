@@ -18,7 +18,6 @@ def quoine(api_key, api_key_secret):
     
     balances = client.get_crypto_accounts()
 
-    # output_dict = {i['currency']:i['balance'] for i in balances if float(value) > 0.0}
     output_dict = {i['currency']:i['balance'] for i in balances}
 
     products = [i for i in client.get_products() if i['quoted_currency'] == "JPY"]
