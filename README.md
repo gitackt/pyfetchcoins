@@ -35,7 +35,7 @@ You can use for below exchanges.
 
 ## Usage
 ```python
-import fetching from pyfetchcoins
+from pyfetchcoins import fetching
 
 name = "Bitflyer"
 api_key = "xxxxxxxxxxxxxxxxx"
