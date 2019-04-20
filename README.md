@@ -1,29 +1,22 @@
 # pyfetchcoins
-You can fetch crypto currency amount from exchange accounts. 
-`pyfetchcoins` is a wrapper libraly for some fetching crypto currency libralies.
+Fetch crypto currency amount from exchange accounts. You need `api_key` and `api_key_secret` for your exchanges.
 
 ## Install
 Install package from this github repository.
 ```
 pip install git+https://github.com/gitackt/pyfetchcoins.git
 ```
-<!-- 
+
 ## Setting
 Install package dependencies from pip.
 
 ```
-requests
-pybitflyer
-python-binance
-python-kucoin
-zaifapi
-coincheck
-python-quoine
-git+https://github.com/bitbankinc/python-bitbankcc.git
-https://github.com/s4w3d0ff/python-poloniex/archive/v0.4.7.zip
-``` -->
+pip install git+https://github.com/bitbankinc/python-bitbankcc.git
+pip install https://github.com/s4w3d0ff/python-poloniex/archive/v0.4.7.zip
+```
 
-You can use for below exchanges.
+## Usage
+Use for below exchanges.
 * Binance
 * Bitflyer
 * Quoine
@@ -33,15 +26,15 @@ You can use for below exchanges.
 * Coincheck
 * Zaif
 
-## Usage
+
 ```python
-from pyfetchcoins import fetching
+from pyfetchcoins.fetching import fetch
 
 name = "Bitflyer"
 api_key = "xxxxxxxxxxxxxxxxx"
 api_key_secret = "xxxxxxxxxxxxxxxxxxxxxxxx"
 
-fetching.fetch(name, api_key, api_key_secret)
+fetch(name, api_key, api_key_secret)
 ```
 
 ### Response
